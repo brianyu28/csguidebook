@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+$siteFont: 'Lato', sans-serif;
+
 body {
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 10px;
   font-family: sans-serif;
 }
 
 .app {
-    font-family: 'Lato', sans-serif;
+    font-family: $siteFont;
 }
 
 .header {

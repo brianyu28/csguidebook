@@ -1,4 +1,9 @@
-import * as React from 'react';
+import * as React from "react";
+import { Route } from "react-router-dom";
+
+import { Guide } from "./components/Guide";
+import { Welcome } from "./components/Welcome";
+
 import "./css/App.css";
 
 class App extends React.Component {
@@ -6,11 +11,8 @@ class App extends React.Component {
   public render() {
     return (
       <div className="app">
-        <div className="header">
-          <img id="logo" src="/assets/img/logo.png" />
-          <h1>CS Guidebook</h1>
-          By Brian Yu
-        </div>
+          <Route exact path="/" component={Welcome} />
+          <Route path="/guide" component={Guide} />
       </div>
     );
   }
