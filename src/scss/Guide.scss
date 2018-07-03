@@ -32,8 +32,8 @@
             flex-basis: 200px;
 
             ul.chapter-nav {
-                border-left: 2px solid red;
-                background-color: grey;
+                border-left: 3px solid $blue1;
+                background-color: $blue4_light;
                 padding: 0px;
                 list-style-type: none;
                 padding: 8px;
@@ -46,6 +46,8 @@
 
             ul.section-nav {
                 list-style-type: square;
+                padding-left: 15px;
+                margin-left: 5px;
             }
         }
 
