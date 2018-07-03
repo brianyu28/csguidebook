@@ -12,7 +12,8 @@ interface Props {
             chapterSlug: string;
             sectionSlug: string | undefined;
         }
-    }
+    };
+    history: any;
 }
 
 interface State {
@@ -44,7 +45,7 @@ export default class GuideSection extends React.Component<Props, State> {
 
     public updateContents() {
         const params = this.props.match.params;
-        fetch(`/guides/${params.guideSlug}/index.json`)
+        fetch(`/data/guides/${params.guideSlug}/index.json`)
         .then(res => res.json())
         .then((data: GuideConfig) => {
             let chapterConfig: ChapterConfig | undefined;
@@ -86,7 +87,7 @@ export default class GuideSection extends React.Component<Props, State> {
             }
 
             // Get the requested section.
-            const contentURL = `/guides/${params.guideSlug}/${chapterConfig.dirname}/${sectionConfig.filename}`;
+            const contentURL = `/data/guides/${params.guideSlug}/${chapterConfig.dirname}/${sectionConfig.filename}`;
             if (this.state.contentURL === contentURL) {
                 return;
             }

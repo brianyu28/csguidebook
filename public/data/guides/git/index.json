@@ -9,6 +9,15 @@
                 {"name": "What is Git?", "slug": "git", "filename": "1.git_explained.md"},
                 {"name": "Repositories", "slug": "repositories", "filename": "2.repositories.md"}
             ]
+        },
+        {
+            "name": "Next Steps",
+            "slug": "second",
+            "dirname": "2.second",
+            "sections": [
+                {"name": "Sample", "slug": "sample", "filename": "1.sample.md"},
+                {"name": "Test", "slug": "test", "filename": "2.test.md"}
+            ]
         }
     ]
 }

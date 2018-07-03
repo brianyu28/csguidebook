@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 import { ChapterConfig } from "../types/GuideTypes";
 
@@ -17,18 +17,17 @@ export default class GuideNavigation extends React.Component<Props> {
             const sections = chapter.sections.map(section => {
                 return (
                     <li key={section.slug}>
-                        <Link to={`/guide/${this.props.guideSlug}/${chapter.slug}/${section.slug}`}>
-                            {section.name}
-                        </Link>
+                        <SectionLink
+                            label={section.name}
+                            to={`/guide/${this.props.guideSlug}/${chapter.slug}/${section.slug}`}
+                        />
                     </li>
                 );
             });
 
             return (
                 <li key={chapter.slug}>
-                    <Link className="nav-chapter-name" to={`/guide/${this.props.guideSlug}/${chapter.slug}`}>
-                        {chapter.name}
-                    </Link>
+                    <ChapterLink label={chapter.name} to={`/guide/${this.props.guideSlug}/${chapter.slug}`} />
                     <ul className="section-nav">{sections}</ul>
                 </li>
             );
@@ -42,3 +41,31 @@ export default class GuideNavigation extends React.Component<Props> {
         );
     }
 }
+
+const ChapterLink = ({ label, to }: { label: string, to: string }) => (
+    <Route
+        path={to}
+        children={({ match }) => (
+            <Link
+                className={match ? "active nav-chapter-name": "nav-chapter-name"}
+                to={to}
+            >
+                {label}
+            </Link>
+        )}
+    />
+);
+
+const SectionLink = ({ label, to }: { label: string, to: string }) => (
+    <Route
+        path={to}
+        children={({ match }) => (
+            <Link
+                className={match ? "active nav-section-name": "nav-section-name"}
+                to={to}
+            >
+                {label}
+            </Link>
+        )}
+    />
+);

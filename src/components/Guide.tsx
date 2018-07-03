@@ -31,7 +31,7 @@ export default class Guide extends React.Component<Props, State> {
 
     public componentDidMount() {
         const guideSlug: string = this.props.match.params.guideSlug;
-        fetch(`/guides/${guideSlug}/index.json`)
+        fetch(`/data/guides/${guideSlug}/index.json`)
         .then(res => res.json())
         .then((data: GuideConfig) => {
             this.setState({
@@ -43,7 +43,9 @@ export default class Guide extends React.Component<Props, State> {
     public render() {
         if (this.state.config === null) {
             return (
-                <h1>Loading...</h1>
+                <div className="guide">
+                    <h1>Loading...</h1>
+                </div>
             );
         }
         const config: GuideConfig = this.state.config;
