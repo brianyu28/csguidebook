@@ -8,9 +8,13 @@ export default class Welcome extends React.Component {
         <div className="homepage-header">
             <img id="homepage-logo" src="/assets/img/logo.png" />
             <h1>CS Guidebook</h1>
-            By Brian Yu
+            Learn about...
             <br/><br/>
             <Link to="/guide/git">Git</Link>
+            <br/><br/>
+            <hr/>
+            <br/>
+            CS Guidebook is a work in progrss by <a href="https://www.brianyu.me" target="_blank">Brian Yu</a>.
         </div>
     );
   }
