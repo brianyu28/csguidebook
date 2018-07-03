@@ -26,17 +26,18 @@ export default class GuideNavigation extends React.Component<Props> {
 
             return (
                 <li key={chapter.slug}>
-                    <Link to={`/guide/${this.props.guideSlug}/${chapter.slug}`}>
+                    <Link className="nav-chapter-name" to={`/guide/${this.props.guideSlug}/${chapter.slug}`}>
                         {chapter.name}
                     </Link>
-                    <ul>{sections}</ul>
+                    <ul className="section-nav">{sections}</ul>
                 </li>
             );
         });
         return (
-            <div>
+            <div className="guide-navigation">
+                <Link to="/"><button className="btn-small">Back to Homepage</button></Link>
                 <h2>Table of Contents</h2>
-                <ul>{chapters}</ul>
+                <ul className="chapter-nav">{chapters}</ul>
             </div>
         );
     }

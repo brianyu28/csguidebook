@@ -1,9 +1,11 @@
 import * as React from "react";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import { GuideConfig } from "../types/GuideTypes";
 import GuideNavigation from "./GuideNavigation";
 import GuideSection from "./GuideSection";
+
+import "../css/Guide.css";
 
 interface Props {
     match: {
@@ -17,7 +19,7 @@ interface State {
     config: GuideConfig | null;
 }
 
-export class Guide extends React.Component<Props, State> {
+export default class Guide extends React.Component<Props, State> {
 
     constructor(props: Props) {
         super(props);
@@ -46,14 +48,19 @@ export class Guide extends React.Component<Props, State> {
         }
         const config: GuideConfig = this.state.config;
         return (
-            <div>
-                <h1>{config.title}</h1>
-                <Link to="/">Back to Homepage</Link>
-                <GuideNavigation
-                    chapters={config.chapters}
-                    guideSlug={this.props.match.params.guideSlug}
-                />
-                <Route path="/guide/:guideSlug/:chapterSlug/:sectionSlug?" component={GuideSection} />
+            <div className="guide">
+                <div className="guide-header">
+                    <h1>{config.title}</h1>
+                </div>
+                <div className="guide-container">
+                    <GuideNavigation
+                        chapters={config.chapters}
+                        guideSlug={this.props.match.params.guideSlug}
+                    />
+                    <div className="guide-content">
+                        <Route path="/guide/:guideSlug/:chapterSlug?/:sectionSlug?" component={GuideSection} />
+                    </div>
+                </div>
             </div>
         );
     }

@@ -47,9 +47,17 @@ export default class GuideSection extends React.Component<Props, State> {
         fetch(`/guides/${params.guideSlug}/index.json`)
         .then(res => res.json())
         .then((data: GuideConfig) => {
-            const chapterConfig: ChapterConfig | undefined = _.find(data.chapters, (chapter) => {
-                return (chapter.slug === params.chapterSlug);
-            });
+            let chapterConfig: ChapterConfig | undefined;
+
+            // Use first chapter if no chapter specified.
+            if (params.chapterSlug === undefined) {
+                chapterConfig = data.chapters[0];
+            } else {
+                chapterConfig = _.find(data.chapters, (chapter) => {
+                    return (chapter.slug === params.chapterSlug);
+                });
+            }
+
 
             // If the requested chapter wasn't found, show an error.
             if (chapterConfig === undefined) {
