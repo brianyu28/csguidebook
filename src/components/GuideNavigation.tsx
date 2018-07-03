@@ -12,14 +12,16 @@ export default class GuideNavigation extends React.Component<Props> {
 
     public render() {
 
-        const chapters = this.props.chapters.map(chapter => {
+        const chapters = this.props.chapters.map((chapter, chapterIndex) => {
 
-            const sections = chapter.sections.map(section => {
+            const sections = chapter.sections.map((section, sectionIndex) => {
                 return (
                     <li key={section.slug}>
                         <SectionLink
                             label={section.name}
                             to={`/guide/${this.props.guideSlug}/${chapter.slug}/${section.slug}`}
+                            index={sectionIndex}
+                            chapterIndex={chapterIndex}
                         />
                     </li>
                 );
@@ -27,7 +29,11 @@ export default class GuideNavigation extends React.Component<Props> {
 
             return (
                 <li key={chapter.slug}>
-                    <ChapterLink label={chapter.name} to={`/guide/${this.props.guideSlug}/${chapter.slug}`} />
+                    <ChapterLink
+                        label={chapter.name}
+                        to={`/guide/${this.props.guideSlug}/${chapter.slug}`}
+                        index={chapterIndex}
+                    />
                     <ul className="section-nav">{sections}</ul>
                 </li>
             );
@@ -42,30 +48,43 @@ export default class GuideNavigation extends React.Component<Props> {
     }
 }
 
-const ChapterLink = ({ label, to }: { label: string, to: string }) => (
+const ChapterLink = ({ label, to, index }: { label: string, to: string, index: number }) => (
     <Route
         path={to}
-        children={({ match }) => (
-            <Link
-                className={match ? "active nav-chapter-name": "nav-chapter-name"}
-                to={to}
-            >
-                {label}
-            </Link>
-        )}
+        children={({ match, location }) => {
+
+            // Active url could also be of the form /guides/TOPIC
+            const active = match || (index === 0 && location.pathname.split("/").length < 4);
+            return (
+                <Link
+                    className={active ? "active nav-chapter-name": "nav-chapter-name"}
+                    to={to}
+                >
+                    {label}
+                </Link>
+            );
+        }}
     />
 );
 
-const SectionLink = ({ label, to }: { label: string, to: string }) => (
+const SectionLink = ({ label, to, index, chapterIndex }:
+    { label: string, to: string, index: number, chapterIndex: number }) => (
     <Route
         path={to}
-        children={({ match }) => (
-            <Link
-                className={match ? "active nav-section-name": "nav-section-name"}
-                to={to}
-            >
-                {label}
-            </Link>
-        )}
+        children={({ match, location }) => {
+
+            // Active url could also be of the form /guides/TOPIC or /guides/TOPIC/chapter
+            const active = match || (index === 0 && chapterIndex === 0 && location.pathname.split("/").length < 4) ||
+                (index === 0 && location.pathname.split("/").length === 4 && to.split("/").length === 5 &&
+                 to.startsWith(location.pathname));
+            return (
+                <Link
+                    className={active ? "active nav-section-name": "nav-section-name"}
+                    to={to}
+                >
+                    {label}
+                </Link>
+            );
+        }}
     />
 );
