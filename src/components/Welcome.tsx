@@ -10,7 +10,7 @@ export class Welcome extends React.Component {
             <h1>CS Guidebook</h1>
             By Brian Yu
             <br/><br/>
-            <Link to="/guide">Start Learning</Link>
+            <Link to="/guide/git">Git</Link>
         </div>
     );
   }

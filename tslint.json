@@ -7,6 +7,13 @@
       ]
   },
   "rules": {
-      "jsx-boolean-value": false
+      "array-type": false,
+      "interface-name": false,
+      "jsx-boolean-value": false,
+      "jsx-no-lambda": false,
+      "no-console": false,
+      "object-literal-shorthand": false,
+      "object-literal-sort-keys": false,
+      "ordered-imports": false
   }
 }

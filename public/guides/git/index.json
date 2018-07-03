@@ -1,0 +1,14 @@
+{
+    "title": "Introduction to Git",
+    "chapters": [
+        {
+            "name": "Fundamentals",
+            "slug": "fundamentals",
+            "dirname": "1.fundamentals",
+            "sections": [
+                {"name": "What is Git?", "slug": "git", "filename": "1.git_explained.md"},
+                {"name": "Repositories", "slug": "repositories", "filename": "2.repositories.md"}
+            ]
+        }
+    ]
+}
