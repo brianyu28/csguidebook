@@ -2,6 +2,10 @@
 
 .site-header {
 
+    height: $headerHeight;
+    width: 100%;
+    position: fixed;
+
     background-color: $black;
     height: 70px;
 

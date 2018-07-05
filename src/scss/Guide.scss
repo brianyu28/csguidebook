@@ -1,9 +1,15 @@
 @import "Constants";
 
+$navWidth: 200px;
+$navMobileTransitionTime: 0.2s;
+
 .guide {
     height: 100%;
 
     .guide-header {
+        height: $guideHeaderHeight;
+        position: fixed;
+        width: 100%;
         background-color: $blue3;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -18,19 +24,61 @@
 
     .guide-container {
         height: 100%;
+        padding-top: $guideHeaderHeight + 10px;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
 
-        .guide-navigation {
+        #guide-nav-toggle {
+            display: none;
+
+            @media only screen and (max-width: $maxWidthMobile) {
+                display: inline;
+            }
+        }
+
+
+        #guide-navigation {
             h2 {
                 margin-top: 5px;
                 margin-bottom: 10px;
             }
             padding: 10px;
             background-color: $blue4;
-            flex-basis: 200px;
-            min-width: 200px;
+            flex-basis: $navWidth;
+            min-width: $navWidth;
+            overflow-y: auto;
+
+            #nav-close-button {
+                display: none;
+            }
+
+            @media only screen and (max-width: $maxWidthMobile) {
+                min-width: 0;
+                width: 0;
+                max-width: 0;
+                z-index: 1;
+                left: 0;
+                padding: 0;
+                height: 100%;
+                overflow-x: hidden;
+                transition: $navMobileTransitionTime;
+                position: fixed;
+
+                &.mobile-active {
+                    width: $navWidth;
+                    max-width: $navWidth;
+                    min-width: $navWidth;
+                    padding: 5px;
+                }
+
+                #nav-close-button {
+                    display: inline;
+                    background-color: Transparent;
+                    font-size: 18px;
+                    float: right;
+                }
+            }
 
             ul.chapter-nav {
 
@@ -72,7 +120,11 @@
         }
 
         .guide-content {
-            padding: 5px 10px;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 150px;
+            overflow-y: auto;
         }
     }
 }

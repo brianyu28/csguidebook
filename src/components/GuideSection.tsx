@@ -98,6 +98,8 @@ export default class GuideSection extends React.Component<Props, State> {
                     contentURL,
                     content: text
                 });
+                const sidebar = document.querySelector("#guide-navigation")!;
+                sidebar.classList.remove("mobile-active");
             });
         });
     }

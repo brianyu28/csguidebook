@@ -28,6 +28,10 @@ body {
     text-align: center;
 }
 
+#site-content {
+    padding-top: $headerHeight;
+}
+
 #homepage-logo {
     width: 90px;
     height: 90px;

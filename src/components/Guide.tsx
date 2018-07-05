@@ -58,12 +58,19 @@ export default class Guide extends React.Component<Props, State> {
                     <GuideNavigation
                         chapters={config.chapters}
                         guideSlug={this.props.match.params.guideSlug}
+                        toggleNav={this.toggleNav}
                     />
                     <div className="guide-content">
+                        <button className="btn-primary btn-small" id="guide-nav-toggle" onClick={this.toggleNav}>Navigation</button>
                         <Route path="/guide/:guideSlug/:chapterSlug?/:sectionSlug?" component={GuideSection} />
                     </div>
                 </div>
             </div>
         );
+    }
+
+    public toggleNav() {
+        const sidebar = document.querySelector("#guide-navigation")!;
+        sidebar.classList.toggle("mobile-active");
     }
 }

@@ -6,6 +6,9 @@ import { ChapterConfig } from "../types/GuideTypes";
 interface Props {
     chapters: Array<ChapterConfig>;
     guideSlug: string;
+
+    // Actions
+    toggleNav: () => void;
 }
 
 export default class GuideNavigation extends React.Component<Props> {
@@ -39,7 +42,9 @@ export default class GuideNavigation extends React.Component<Props> {
             );
         });
         return (
-            <div className="guide-navigation">
+            <div id="guide-navigation">
+                <button id="nav-close-button" className="btn-small" onClick={this.props.toggleNav}>&times;</button>
+                <br/>
                 <Link to="/"><button className="btn-small">Back to Homepage</button></Link>
                 <h2>Table of Contents</h2>
                 <ul className="chapter-nav">{chapters}</ul>
