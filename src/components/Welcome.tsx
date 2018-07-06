@@ -17,7 +17,7 @@ export default class Welcome extends React.Component {
             <br/><br/>
             <hr/>
             <br/>
-            CS Guidebook is a work in progrss by <a href="https://www.brianyu.me" target="_blank">Brian Yu</a>.
+            CS Guidebook is a work in progress by <a href="https://www.brianyu.me" target="_blank">Brian Yu</a>.
         </div>
     );
   }
