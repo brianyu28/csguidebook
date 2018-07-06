@@ -4,127 +4,113 @@ $navWidth: 200px;
 $navMobileTransitionTime: 0.2s;
 
 .guide {
-    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 
-    .guide-header {
-        height: $guideHeaderHeight;
-        position: fixed;
-        width: 100%;
-        background-color: $blue3;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        text-align: center;
+    #guide-nav-toggle {
+        display: none;
 
-        h1 {
-            margin: 0px;
-            padding: 0px;
-            font-size: 28px;
+        @media only screen and (max-width: $maxWidthMobile) {
+            display: inline;
         }
     }
 
-    .guide-container {
-        height: 100%;
-        padding-top: $guideHeaderHeight + 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+    #guide-navigation {
+        h2 {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        padding: 10px;
+        background-color: $green1;
+        min-width: $navWidth;
+        max-width: $navWidth;
+        flex-grow: 1;
+        height: 100vh;
+        overflow-y: auto;
 
-        #guide-nav-toggle {
-            display: none;
-
-            @media only screen and (max-width: $maxWidthMobile) {
-                display: inline;
-            }
+        #guide-logo {
+            width: 70px;
+            height: 70px;
         }
 
+        #nav-close-button {
+            display: none;
+        }
 
-        #guide-navigation {
-            h2 {
-                margin-top: 5px;
-                margin-bottom: 10px;
+        @media only screen and (max-width: $maxWidthMobile) {
+            min-width: 0;
+            width: 0;
+            max-width: 0;
+            z-index: 1;
+            left: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            transition: $navMobileTransitionTime;
+            position: fixed;
+
+            &.mobile-active {
+                width: $navWidth;
+                max-width: $navWidth;
+                min-width: $navWidth;
+                padding: 5px;
             }
-            padding: 10px;
-            background-color: $blue4;
-            flex-basis: $navWidth;
-            min-width: $navWidth;
-            overflow-y: auto;
 
             #nav-close-button {
-                display: none;
+                display: inline;
+                background-color: Transparent;
+                font-size: 18px;
+                float: right;
+            }
+        }
+
+        ul.chapter-nav {
+
+            > li {
+                border-left: 3px solid $blue1;
+                background-color: $green2;
+                padding: 10px;
+                margin-bottom: 10px;
             }
 
-            @media only screen and (max-width: $maxWidthMobile) {
-                min-width: 0;
-                width: 0;
-                max-width: 0;
-                z-index: 1;
-                left: 0;
-                padding: 0;
-                height: 100%;
-                overflow-x: hidden;
-                transition: $navMobileTransitionTime;
-                position: fixed;
+            padding: 0px;
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 5px;
 
-                &.mobile-active {
-                    width: $navWidth;
-                    max-width: $navWidth;
-                    min-width: $navWidth;
-                    padding: 5px;
-                }
-
-                #nav-close-button {
-                    display: inline;
-                    background-color: Transparent;
-                    font-size: 18px;
-                    float: right;
-                }
-            }
-
-            ul.chapter-nav {
-
-                > li {
-                    border-left: 3px solid $blue1;
-                    background-color: $blue4_light;
-                    padding: 10px;
-                    margin-bottom: 10px;
-                }
-
-                padding: 0px;
-                list-style-type: none;
-                padding: 0px;
-                margin: 0px;
-                margin-bottom: 5px;
-
-                .nav-chapter-name {
-                    &.active {
-                        font-weight: bold;
-                        text-decoration: none;
-                        color: $black;
-                    }
-                }
-            }
-
-            ul.section-nav {
-                list-style-type: square;
-                padding-left: 15px;
-                margin-left: 5px;
-
-                .nav-section-name {
-                    &.active {
-                        font-weight: bold;
-                        text-decoration: none;
-                        color: $black;
-                    }
+            .nav-chapter-name {
+                &.active {
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: $black;
                 }
             }
         }
 
-        .guide-content {
-            padding-top: 5px;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 150px;
-            overflow-y: auto;
+        ul.section-nav {
+            list-style-type: square;
+            padding-left: 15px;
+            margin-left: 5px;
+
+            .nav-section-name {
+                &.active {
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
         }
+    }
+
+    .guide-content {
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 150px;
+        height: 100vh;
+        flex-grow: 1;
+        overflow-y: auto;
     }
 }

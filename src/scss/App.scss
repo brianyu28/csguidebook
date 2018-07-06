@@ -10,12 +10,9 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif;
+  font-family: $siteFont;
   height: 100%;
-
-  #root {
-      height: 100%;
-  }
+  overflow-y: hidden;
 }
 
 .app {
@@ -24,12 +21,7 @@ body {
 }
 
 .homepage-header {
-    margin-top: 20px;
     text-align: center;
-}
-
-#site-content {
-    padding-top: $headerHeight;
 }
 
 #homepage-logo {
@@ -65,4 +57,16 @@ button {
             background-color: $blue1_dark;
         }
     }
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.undecorated-link {
+    text-decoration: none;
+    color: $black;
+
 }

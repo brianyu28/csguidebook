@@ -51,19 +51,15 @@ export default class Guide extends React.Component<Props, State> {
         const config: GuideConfig = this.state.config;
         return (
             <div className="guide">
-                <div className="guide-header">
-                    <h1>{config.title}</h1>
-                </div>
-                <div className="guide-container">
-                    <GuideNavigation
-                        chapters={config.chapters}
-                        guideSlug={this.props.match.params.guideSlug}
-                        toggleNav={this.toggleNav}
-                    />
-                    <div className="guide-content">
-                        <button className="btn-primary btn-small" id="guide-nav-toggle" onClick={this.toggleNav}>Navigation</button>
-                        <Route path="/guide/:guideSlug/:chapterSlug?/:sectionSlug?" component={GuideSection} />
-                    </div>
+                <GuideNavigation
+                    chapters={config.chapters}
+                    guideSlug={this.props.match.params.guideSlug}
+                    toggleNav={this.toggleNav}
+                    title={config.title}
+                />
+                <div className="guide-content">
+                    <button className="btn-primary btn-small" id="guide-nav-toggle" onClick={this.toggleNav}>Navigation</button>
+                    <Route path="/guide/:guideSlug/:chapterSlug?/:sectionSlug?" component={GuideSection} />
                 </div>
             </div>
         );
