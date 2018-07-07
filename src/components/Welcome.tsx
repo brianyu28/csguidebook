@@ -13,7 +13,7 @@ export default class Welcome extends React.Component {
     public render() {
 
         const links = this.linkData.map((link) => (
-            <div>
+            <div key={link.url}>
                 <Link to={"/guide/" + link.url}>{link.name}</Link>
                 <br/>
             </div>
