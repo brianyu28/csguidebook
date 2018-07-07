@@ -108,9 +108,12 @@ $navMobileTransitionTime: 0.2s;
         padding-top: 5px;
         padding-left: 10px;
         padding-right: 10px;
-        padding-bottom: 150px;
         height: 100vh;
         flex-grow: 1;
         overflow-y: auto;
+
+        .section {
+            padding-bottom: 30px;
+        }
     }
 }

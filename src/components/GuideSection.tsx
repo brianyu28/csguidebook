@@ -3,7 +3,7 @@ import { Markdown } from "react-showdown";
 import * as _ from "lodash";
 
 import { ChapterConfig, GuideConfig, SectionConfig } from "../types/GuideTypes";
-
+import Image from "./Image";
 
 interface Props {
     match: {
@@ -127,7 +127,10 @@ export default class GuideSection extends React.Component<Props, State> {
 
         return (
             <div className="section">
-                <Markdown markup={this.state.content} />
+                <Markdown
+                    markup={this.state.content}
+                    components={{ Image }}
+                />
             </div>
         );
     }

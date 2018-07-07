@@ -2,11 +2,11 @@
     "title": "Graph Theory",
     "chapters": [
         {
-            "name": "Fundamentals",
-            "slug": "fundamentals",
-            "dirname": "1.fundamentals",
+            "name": "Introduction",
+            "slug": "intro",
+            "dirname": "1.intro",
             "sections": [
-                {"name": "First Section", "slug": "intro", "filename": "1.intro.md"}
+                {"name": "Graphs", "slug": "graphs", "filename": "1.graphs.md"}
             ]
         }
     ]
