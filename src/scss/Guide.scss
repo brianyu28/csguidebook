@@ -110,7 +110,8 @@ $navMobileTransitionTime: 0.2s;
         padding-right: 10px;
         height: 100vh;
         flex-grow: 1;
-        overflow-y: auto;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
 
         .section {
             padding-bottom: 30px;
