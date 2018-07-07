@@ -1,9 +1,10 @@
 import * as React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import * as ReactGA from "react-ga";
 
 import Guide from "./components/Guide";
 import Welcome from "./components/Welcome";
+import Error404 from "./components/Error404";
 
 import "./css/App.css";
 
@@ -20,8 +21,11 @@ class App extends React.Component {
     return (
         <div className="app">
             <Route pattern="/" component={Analytics} />
-            <Route exact path="/" component={Welcome} />
-            <Route path="/guide/:guideSlug" component={Guide} />
+            <Switch>
+                <Route exact path="/" component={Welcome} />
+                <Route path="/guide/:guideSlug" component={Guide} />
+                <Route component={Error404} />
+            </Switch>
         </div>
     );
   }
