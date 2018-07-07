@@ -11,7 +11,9 @@ import "./css/App.css";
 ReactGA.initialize("UA-121924288-1");
 
 const Analytics = () => {
-    ReactGA.pageview(window.location.pathname);
+    if (process.env.NODE_ENV === "production") {
+        ReactGA.pageview(window.location.pathname);
+    }
     return null;
 }
 
