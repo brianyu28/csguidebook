@@ -1,12 +1,12 @@
 {
-    "title": "Introduction to Git",
+    "title": "Graph Theory",
     "chapters": [
         {
             "name": "Fundamentals",
             "slug": "fundamentals",
             "dirname": "1.fundamentals",
             "sections": [
-                {"name": "What is Git?", "slug": "git", "filename": "1.git_explained.md"}
+                {"name": "First Section", "slug": "intro", "filename": "1.intro.md"}
             ]
         }
     ]
