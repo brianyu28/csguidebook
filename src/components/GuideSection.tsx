@@ -98,7 +98,8 @@ export default class GuideSection extends React.Component<Props, State> {
             .then(text => {
                 this.setState({
                     contentURL,
-                    content: text
+                    content: text,
+                    error: false
                 });
                 const sidebar = document.querySelector("#guide-navigation")!;
                 sidebar.classList.remove("mobile-active");
