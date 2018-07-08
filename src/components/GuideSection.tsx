@@ -1,9 +1,11 @@
 import * as React from "react";
 import { Markdown } from "react-showdown";
+import { InlineMath, BlockMath } from "react-katex";
 import * as _ from "lodash";
 
 import { ChapterConfig, GuideConfig, SectionConfig } from "../types/GuideTypes";
 import Image from "./Image";
+import "katex/dist/katex.min.css";
 
 interface Props {
     match: {
@@ -129,7 +131,7 @@ export default class GuideSection extends React.Component<Props, State> {
             <div className="section">
                 <Markdown
                     markup={this.state.content}
-                    components={{ Image }}
+                    components={{ Image, InlineMath, BlockMath }}
                 />
             </div>
         );
