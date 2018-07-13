@@ -4,12 +4,10 @@ interface Props {
     guide: string;
     filename: string;
     alt: string;
-    height?: string;
     width?: string;
 }
 
-const DEFAULT_HEIGHT: string = "250px";
-const DEFAULT_WIDTH: string = "auto";
+const DEFAULT_WIDTH: string = "600px";
 
 export default class Image extends React.Component<Props> {
 
@@ -17,8 +15,8 @@ export default class Image extends React.Component<Props> {
 
         const imgStyle = {
             display: "block",
-            height: this.props.height !== undefined ? this.props.height : DEFAULT_HEIGHT,
             width: this.props.width !== undefined ? this.props.width : DEFAULT_WIDTH,
+            maxWidth: "100%",
             marginLeft: "auto",
             marginRight: "auto"
         };
@@ -27,6 +25,7 @@ export default class Image extends React.Component<Props> {
             <img
                 src={"/data/guides/" + this.props.guide + "/img/" + this.props.filename}
                 alt={this.props.alt}
+                title={this.props.alt}
                 style={imgStyle}
             />
         );
