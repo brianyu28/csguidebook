@@ -6,7 +6,11 @@
             "slug": "intro",
             "dirname": "1.intro",
             "sections": [
-                {"name": "Graphs", "slug": "graphs", "filename": "1.graphs.md"}
+                {
+                    "name": "Graphs",
+                    "slug": "graphs",
+                    "filename": "1.graphs.md"
+                }
             ]
         }
     ]

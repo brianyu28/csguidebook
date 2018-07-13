@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-48.258 26.81 548.928 442.359" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <symbol id="symbol-1" viewBox="0 0 55.28 11.258">
+      <title>Arrow</title>
+      <path d="M 153.204 172.565 H 203.39 L 203.39 169.997 L 208.484 174.2635 L 203.39 178.53 L 203.39 175.962 H 153.204 V 172.565 Z" transform="matrix(1, 0, 0, 1, -153.20399475097656, -168.63499450683594)" bx:shape="arrow 153.204 169.997 55.28 8.533 3.397 5.094 0 1@f22e84bb"/>
+    </symbol>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, -16.57704, 48.625984)">
+    <circle cx="91.823" cy="238.606" r="47.869" style="fill: rgb(6, 101, 201);"/>
+    <text style="fill: rgb(255, 255, 255); font-size: 69.5px; font-family: Arial; white-space: pre;" x="68.666" y="262.748">A</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 5.52568, -27.628401)">
+    <circle cx="254.021" cy="109.92" r="47.869" style="fill: rgb(6, 101, 201);"/>
+    <text style="fill: rgb(255, 255, 255); font-size: 69.5px; white-space: pre; font-family: Arial;" x="230.856" y="134.063">B</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -12.734585, 15.415549)">
+    <circle cx="384.381" cy="394.164" r="47.869" style="fill: rgb(6, 101, 201);"/>
+    <text style="fill: rgb(255, 255, 255); font-size: 69.5px; white-space: pre; font-family: Arial;" x="359.298" y="418.301">C</text>
+  </g>
+  <use width="55.279998779296875" height="11.258000373840332" transform="matrix(1.769191, -2.10844, 2.10844, 1.769191, 101.560951, 228.910034)" xlink:href="#symbol-1"/>
+  <use width="55.279998779296875" height="11.258000373840332" transform="matrix(3.465346, 1.623774, -1.163203, 2.494496, 134.126556, 287.055237)" xlink:href="#symbol-1"/>
+  <use width="55.279998779296875" height="11.258000373840332" transform="matrix(-1.470698, -4.041451, 2.576722, -0.9675, 351.101013, 357.766693)" xlink:href="#symbol-1"/>
+</svg>

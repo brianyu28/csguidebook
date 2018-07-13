@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="65.013 117.962 776.495 234.962" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <symbol id="symbol-0" viewBox="0 0 70.0622 95.1745">
+      <title>Document</title>
+      <g transform="matrix(0.3333339989185333, 0, 0, 0.3333339989185333, -25.022322709131466, -34.4057363225936)">
+        <title>Document</title>
+        <rect x="75.067" y="54.274" width="19.437" height="150.134" transform="matrix(0, 1, -1, 0, 279.474823, 28.150002)"/>
+        <rect x="75.067" y="103.217" width="19.437" height="285.523"/>
+        <rect x="75.067" y="75.596" width="19.437" height="209.115" transform="matrix(0, 1, -1, 0, 359.778076, 294.236023)"/>
+        <rect x="264.745" y="164.209" width="19.437" height="224.531"/>
+        <path d="M 247.854 76.043 L 297.13 125.319 L 247.854 125.319 L 247.854 76.043 Z" transform="matrix(1, 0.000014, -0.000014, 1, -11.876067, 28.666439)" bx:shape="triangle 247.854 76.043 49.276 49.276 0 0 1@6a097c06"/>
+      </g>
+    </symbol>
+    <symbol id="symbol-1" viewBox="0 0 55.28 11.258">
+      <title>Arrow</title>
+      <path d="M 153.204 172.566 H 201.241 L 201.241 168.635 L 208.484 174.264 L 201.241 179.893 L 201.241 175.962 H 153.204 V 172.566 Z" transform="matrix(1, 0, 0, 1, -153.20399475097656, -168.63499450683594)" bx:shape="arrow 153.204 168.635 55.28 11.258 3.397 7.243 0 1@1e0ddfce"/>
+    </symbol>
+  </defs>
+  <use width="70.06220245361328" height="95.17449951171875" transform="matrix(1.7325749397277832, 0, 0, 1.7325749397277832, 96.49390411376953, 144.0481414794922)" xlink:href="#symbol-0"/>
+  <use width="70.06220245361328" height="95.17449951171875" transform="matrix(1.7325749397277832, 0, 0, 1.7325749397277832, 394.36346435546875, 144.0481414794922)" xlink:href="#symbol-0"/>
+  <use width="70.06220245361328" height="95.17449951171875" transform="matrix(1.7325749397277832, 0, 0, 1.7325749397277832, 692.2330322265625, 144.0481414794922)" xlink:href="#symbol-0"/>
+  <use width="55.279998779296875" height="11.258000373840332" transform="matrix(2.4517619609832764, 0, 0, 2.4517619609832764, 238.35597229003906, 212.69564819335938)" xlink:href="#symbol-1"/>
+  <use width="55.279998779296875" height="11.258000373840332" transform="matrix(2.4517619609832764, 0, 0, 2.4517619609832764, 536.2255859375, 212.69564819335938)" xlink:href="#symbol-1"/>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 13.7px; white-space: pre;" x="112.487" y="195.637">First line</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 13.7px; white-space: pre;" x="409.9" y="195.428">First line</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 13.7px; white-space: pre;" x="409.9" y="212.1">Second line</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 13.7px; white-space: pre;" x="706.85" y="191.812">First line</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 13.7px; white-space: pre;" x="706.85" y="208.484">Second line</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 13.7px; white-space: pre;" x="707.229" y="225.156">Third line</text>
+</svg>

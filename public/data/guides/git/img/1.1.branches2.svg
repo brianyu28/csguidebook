@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-21.786 90.775 927.152 335.455" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <symbol id="symbol-1" viewBox="0 0 55.28 11.258">
+      <title>Arrow</title>
+      <path d="M 153.204 172.566 H 201.241 L 201.241 168.635 L 208.484 174.264 L 201.241 179.893 L 201.241 175.962 H 153.204 V 172.566 Z" transform="matrix(1, 0, 0, 1, -153.20399475097656, -168.63499450683594)" bx:shape="arrow 153.204 168.635 55.28 11.258 3.397 7.243 0 1@1e0ddfce"/>
+    </symbol>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, -30.160858, -12.734584)">
+    <circle cx="82.775" cy="203.418" r="34.764" style="fill: rgb(6, 101, 201);"/>
+    <circle cx="82.775" cy="203.418" r="26.13" style="fill: rgb(255, 255, 255);"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 149.798721, -12.734584)">
+    <circle cx="82.775" cy="203.418" r="34.764" style="fill: rgb(6, 101, 201);"/>
+    <circle cx="82.775" cy="203.418" r="26.13" style="fill: rgb(255, 255, 255);"/>
+  </g>
+  <line style="fill: rgb(6, 101, 201); stroke: rgb(6, 101, 201); stroke-width: 9px;" x1="83.11" y1="190.683" x2="203.086" y2="190.683"/>
+  <g transform="matrix(1, 0, 0, 1, 330.085052, -12.734584)">
+    <circle cx="82.775" cy="203.418" r="34.764" style="fill: rgb(6, 101, 201);"/>
+    <circle cx="82.775" cy="203.418" r="26.13" style="fill: rgb(255, 255, 255);"/>
+  </g>
+  <line style="fill: rgb(6, 101, 201); stroke: rgb(6, 101, 201); stroke-width: 9px;" x1="263.396" y1="190.683" x2="383.372" y2="190.683"/>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 17.8px; white-space: pre; text-anchor: middle;" x="52.613" y="249.115">First commit</text>
+  <line style="fill: rgb(6, 101, 201); stroke: rgb(6, 101, 201); stroke-width: 9px;" x1="446.451" y1="190.683" x2="664.482" y2="190.683"/>
+  <line style="fill: rgb(6, 101, 201); stroke: rgb(6, 101, 201); stroke-width: 9px;" x1="421.545" y1="256.096" x2="616.602" y2="256.096" transform="matrix(0.754709, 0.65606, -0.65606, 0.754709, 295.338496, -277.725228)"/>
+  <g transform="matrix(1, 0, 0, 1, 535.945679, 131.615372)">
+    <circle cx="82.775" cy="203.418" r="34.764" style="fill: rgb(6, 101, 201);"/>
+    <circle cx="82.775" cy="203.418" r="26.13" style="fill: rgb(255, 255, 255);"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 561.927795, -12.734584)">
+    <circle cx="82.775" cy="203.418" r="34.764" style="fill: rgb(6, 101, 201);"/>
+    <circle cx="82.775" cy="203.418" r="26.13" style="fill: rgb(255, 255, 255);"/>
+  </g>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 17.8px; white-space: pre; text-anchor: middle;" x="232.562" y="249.122">Changes</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 17.8px; white-space: pre; text-anchor: middle;" x="412.871" y="249.121">More changes</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 17.8px; white-space: pre; text-anchor: middle;" x="612.4" y="249.85" transform="matrix(1, 0, 0, 1, 32.312172, -0.734375)">Even more<tspan x="612.4000244140625" dy="1em">​</tspan>changes</text>
+  <text style="fill: rgb(51, 51, 51); font-family: Courier; font-size: 17.8px; white-space: pre; text-anchor: middle;" x="618.731" y="392.721">Test new feature</text>
+</svg>
